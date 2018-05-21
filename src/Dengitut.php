@@ -1,4 +1,7 @@
 <?php
+
+namespace UniteGroup;
+
 class DengitutApi {
 
     private $apiKey = ''; /* Api ключ, получить можно здесь https://dengitut.online/manage/stores выбрав свой магазин */
