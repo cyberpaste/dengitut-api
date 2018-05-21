@@ -1,6 +1,6 @@
 # dengitut-api
 Библиотека для подключения магазина к партнерской программе https://dengitut.online/
-
+```php
 $dengitutApi = new DengitutApi('6b145f1d0c4d18f2e3ddafa9f33a8dc2');
 
 /* корзина с вашими товарами */
@@ -26,3 +26,4 @@ $orderTitle = "Заказа товара";
 $formName = "Корзина";
 
 $dengitutApi->sendToApi($userName, $userPhone, $userEmail, $orderId, $orderTitle, $formName);
+```
