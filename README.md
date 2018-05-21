@@ -1,5 +1,7 @@
 # Dengitut-api
 Библиотека для подключения магазина к партнерской программе https://dengitut.online/
+## Пример использования
+Переменная $cart содержит массив с товарами в заказе
 ```php
 $dengitutApi = new DengitutApi('6b145f1d0c4d18f2e3ddafa9f33a8dc2');
 
