@@ -10,8 +10,8 @@
                 "reference": "master"
             },
             "autoload": {
-                "psr-0" : {
-                    "unite-group\\dengitut-api" : "src"
+                "psr-4": {
+                  "UniteGroup\\DengitutApi\\": "src/"
                 }
             }
         }
