@@ -30,4 +30,4 @@ $formName = "Корзина";
 $dengitutApi->sendToApi($userName, $userPhone, $userEmail, $orderId, $orderTitle, $formName);
 ```
 ## Помощь
-По проблемам и вопросам по поводу интеграции, пишите на почту info@dengitut.online [info@dengitut.online](mailto:info@dengitut.online)
+По проблемам и вопросам по поводу интеграции, пишите на почту [info@dengitut.online](mailto:info@dengitut.online)
