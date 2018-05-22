@@ -1,5 +1,9 @@
 # Dengitut-api
 Библиотека для подключения магазина к партнерской программе https://dengitut.online/
+## Установка через Composer
+```bash
+composer require unite-group/dengitut-api
+```
 ## Пример использования
 Переменная $cart содержит массив с товарами в заказе
 ```php
