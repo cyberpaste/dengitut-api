@@ -2,6 +2,7 @@
     "name": "unite-group/dengitut-api",
     "type": "library",
     "version": "1.1",
+    "minimum-stability" => "dev",
     "homepage": "https://dengitut.online/",
     "require": {
         "php": ">=5.5.0"
