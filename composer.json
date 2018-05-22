@@ -1,8 +1,13 @@
 {
     "name": "unite-group/dengitut-api",
+    "type": "library",
+    "homepage": "https://dengitut.online/",
+    "require": {
+        "php": ">=5.5.0",
+    },
     "autoload": {
-        "psr-0" : {
-            "UniteGroup\\DengitutApi" : "src"
+        "psr-4": {
+            "UniteGroup\\": "src"
         }
     }
 }
