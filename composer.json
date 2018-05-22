@@ -1,21 +1,8 @@
 {
-    "repositories": [
-    {
-        "type": "package",
-        "package": {
-            "name": "unite-group/dengitut-api",
-            "version": "dev-master",
-            "source": {
-                "url": "git://github.com/unite-group/dengitut-api.git",
-                "type": "git",
-                "reference": "master"
-            },
-            "autoload": {
-                "psr-4": {
-                  "UniteGroup\\DengitutApi\\": "src/"
-                }
-            }
+    "name": "unite-group/dengitut-api",
+    "autoload": {
+        "psr-0" : {
+            "UniteGroup\\DengitutApi" : "src"
         }
     }
-   ]
 }
