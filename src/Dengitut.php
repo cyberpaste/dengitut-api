@@ -80,9 +80,6 @@ class DengitutApi {
                 'name_form' => $formName,
                 'items' => json_encode($this->orderData),
             );
-
-            print_r($sendData);
-
             $this->sendRequest($sendData);
         }
     }
@@ -98,14 +95,8 @@ class DengitutApi {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $sendData);
         $result = curl_exec($ch);
         if ($result) {
-            echo '1';
-            print_r($result);
-
             return true;
         } else {
-            echo '0';
-            print_r($result);
-
             return false;
         }
     }
