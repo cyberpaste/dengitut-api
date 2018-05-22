@@ -62,7 +62,7 @@ class DengitutApi {
      */
 
     public function sendToApi(string $userName, string $userPhone, string $userEmail, int $orderId, string $orderTitle, string $formName) {
-        if (isset($this->userId) && isset($this->shopId) && isset($this->discountId) && count($this->orderData) > 0) {
+        if ($this->userId && $this->shopId && $this->discountId && count($this->orderData) > 0) {
             $sendData = array(
                 'action' => 'purchase',
                 'api_key' => $this->apiKey,
