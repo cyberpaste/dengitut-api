@@ -1,7 +1,7 @@
 {
     "name": "unite-group/dengitut-api",
     "type": "library",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "homepage": "https://dengitut.online/",
     "require": {
         "php": ">=5.5.0"
