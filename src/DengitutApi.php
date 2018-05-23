@@ -87,7 +87,6 @@ class DengitutApi {
     private function sendRequest($sendData) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, self::API_URL);
-        //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_VERBOSE, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -102,7 +101,7 @@ class DengitutApi {
     }
 
     private function getCookie(string $cookieName) {
-        if (isset($_GET[$cookieName]) && !isset($_COOKIE[$cookieName])) {
+        if (isset($_GET[$cookieName])) {
             setcookie($cookieName, $_GET[$cookieName], time() + (60 * 60 * 24 * 30), "/");
         }
         if (isset($_COOKIE[$cookieName])) {
