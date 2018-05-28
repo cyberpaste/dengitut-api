@@ -16,6 +16,11 @@ class DengitutApi {
     const UTM_MEDIUM = 'utm_medium';
     const UTM_CAMPAIGN = 'utm_campaign';
     const UTM_CONTENT = 'utm_content';
+    const SUB_ID1 = 'sub_id1';
+    const SUB_ID2 = 'sub_id2';
+    const SUB_ID3 = 'sub_id3';
+    const SUB_ID4 = 'sub_id4';
+    const SUB_ID5 = 'sub_id5';
     const ERROR_MESSAGE_API = 'Ошибка! Деньгитут - необходимо задать ключ API';
 
     public function __construct(string $apiKey) {
@@ -31,7 +36,12 @@ class DengitutApi {
         $this->utm_source = $this->getCookie(self::UTM_SOURCE);
         $this->utm_medium = $this->getCookie(self::UTM_MEDIUM);
         $this->utm_campaign = $this->getCookie(self::UTM_CAMPAIGN);
-        $this->utm_content = $this->getCookie(self::UTM_CONTENT);
+        $this->utm_content = $this->getCookie(self::UTM_CONTENT);    
+        $this->sub_id1 = $this->getCookie(self::SUB_ID1);
+        $this->sub_id2 = $this->getCookie(self::SUB_ID2);
+        $this->sub_id3 = $this->getCookie(self::SUB_ID3);
+        $this->sub_id4 = $this->getCookie(self::SUB_ID4);
+        $this->sub_id5 = $this->getCookie(self::SUB_ID5);
     }
 
     /*
@@ -77,6 +87,11 @@ class DengitutApi {
                 'utm_medium' => $this->utm_medium,
                 'utm_campaign' => $this->utm_campaign,
                 'utm_content' => $this->utm_content,
+                'sub_id1' => $this->sub_id1,
+                'sub_id2' => $this->sub_id2,
+                'sub_id3' => $this->sub_id3,
+                'sub_id4' => $this->sub_id4,
+                'sub_id5' => $this->sub_id5,
                 'name_form' => $formName,
                 'items' => json_encode($this->orderData),
             );
