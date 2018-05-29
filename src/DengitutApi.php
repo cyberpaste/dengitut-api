@@ -77,6 +77,8 @@ class DengitutApi {
                 'action' => 'purchase',
                 'api_key' => $this->apiKey,
                 'id_user' => $this->userId,
+                'id_partner' => $this->partnerId,
+				'id_shop' => $this->shopId,
                 'user_name' => $userName,
                 'user_phone' => $userPhone,
                 'user_email' => $userEmail,
