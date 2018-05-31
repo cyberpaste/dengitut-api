@@ -123,6 +123,7 @@ class DengitutApi {
     private function getCookie(string $cookieName) {
         if (isset($_GET[$cookieName])) {
             setcookie($cookieName, $_GET[$cookieName], time() + (60 * 60 * 24 * 30), "/");
+            return $_GET[$cookieName];
         }
         if (isset($_COOKIE[$cookieName])) {
             return $_COOKIE[$cookieName];
