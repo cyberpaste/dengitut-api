@@ -139,6 +139,7 @@ class DengitutApi {
         $this->unsetCookie(self::UTM_MEDIUM);
         $this->unsetCookie(self::UTM_CAMPAIGN);
         $this->unsetCookie(self::UTM_CONTENT);
+	$this->unsetCookie(self::OFFER_ID);
     }
 
     private function unsetCookie(string $cookieName) {
