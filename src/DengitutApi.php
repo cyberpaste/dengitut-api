@@ -11,7 +11,7 @@ class DengitutApi {
     const USER_ID = 'dt_userid';
     const PARTNER_ID = 'dt_partnerid';
     const DISCOUNT_ID = 'dt_discountid';
-    const SHOP_ID = 'dt_shopid';
+    const SHOP_ID = 'dt_shopid';	
     const UTM_SOURCE = 'utm_source';
     const UTM_MEDIUM = 'utm_medium';
     const UTM_CAMPAIGN = 'utm_campaign';
@@ -21,6 +21,7 @@ class DengitutApi {
     const SUB_ID3 = 'sub_id3';
     const SUB_ID4 = 'sub_id4';
     const SUB_ID5 = 'sub_id5';
+    const OFFER_ID = 'dt_offerid';
     const ERROR_MESSAGE_API = 'Ошибка! Деньгитут - необходимо задать ключ API';
 
     public function __construct(string $apiKey) {
@@ -42,6 +43,7 @@ class DengitutApi {
         $this->sub_id3 = $this->getCookie(self::SUB_ID3);
         $this->sub_id4 = $this->getCookie(self::SUB_ID4);
         $this->sub_id5 = $this->getCookie(self::SUB_ID5);
+	$this->offerId = $this->getCookie(self::OFFER_ID);
     }
 
     /*
@@ -72,7 +74,7 @@ class DengitutApi {
      */
 
     public function sendToApi(string $userName, string $userPhone, string $userEmail, int $orderId, string $orderTitle, string $formName) {
-        if ($this->userId && $this->shopId && $this->discountId && count($this->orderData) > 0) {
+        if ($this->userId && $this->shopId && count($this->orderData) > 0  && ($this->discountId || $this->offerId)) {
             $sendData = array(
                 'action' => 'purchase',
                 'api_key' => $this->apiKey,
@@ -96,6 +98,7 @@ class DengitutApi {
                 'sub_id5' => $this->sub_id5,
                 'name_form' => $formName,
                 'items' => json_encode($this->orderData),
+		'id_offer' => $this->offerId,
             );
             $this->sendRequest($sendData);
         }
