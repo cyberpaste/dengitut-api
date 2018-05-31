@@ -21,7 +21,7 @@ class DengitutApi {
     const SUB_ID3 = 'sub_id3';
     const SUB_ID4 = 'sub_id4';
     const SUB_ID5 = 'sub_id5';
-    const OFFER_ID = 'dt_offerid';
+    const OFFER_ID = 'dt_linkid';
     const ERROR_MESSAGE_API = 'Ошибка! Деньгитут - необходимо задать ключ API';
 
     public function __construct(string $apiKey) {
@@ -98,7 +98,7 @@ class DengitutApi {
                 'sub_id5' => $this->sub_id5,
                 'name_form' => $formName,
                 'items' => json_encode($this->orderData),
-		'id_offer' => $this->offerId,
+		'id_link' => $this->offerId,
             );
             $this->sendRequest($sendData);
         }
